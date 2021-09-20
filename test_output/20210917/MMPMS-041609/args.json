@@ -1,0 +1,59 @@
+{
+    "args_file": null,
+    "use_gpu": true,
+    "model_dir": null,
+    "eval": false,
+    "infer": false,
+    "embed_file": "./data/glove.840B.300d.txt",
+    "Data": {
+        "data_dir": "data",
+        "vocab_file": "data/vocab.json",
+        "train_file": "data/train.keywords.txt.pkl",
+        "valid_file": "data/valid.keywords.txt.pkl",
+        "test_file": "data/test.keywords.txt.pkl",
+        "max_vocab_size": 30000,
+        "min_len": 1,
+        "max_len": 1
+    },
+    "Model": {
+        "embed_dim": 300,
+        "hidden_dim": 1024,
+        "num_mappings": 20,
+        "tau": 0.67,
+        "num_layers": 1,
+        "bidirectional": true,
+        "attn_mode": "mlp",
+        "use_pretrained_embedding": true,
+        "embed_init_scale": 0.03,
+        "dropout": 0.3
+    },
+    "Train": {
+        "save_dir": "dongming_test_output",
+        "num_epochs": 30,
+        "shuffle": true,
+        "log_steps": 100,
+        "valid_steps": 500,
+        "batch_size": 2
+    },
+    "Optim": {
+        "optimizer": "Adam",
+        "lr": 0.0002,
+        "grad_clip": 5.0,
+        "adam_betas": [
+            0.9,
+            0.999
+        ],
+        "weight_decay": 0.0001
+    },
+    "Inference": {
+        "beam_size": 10,
+        "min_infer_len": 1,
+        "max_infer_len": 1,
+        "length_average": false,
+        "ignore_unk": true,
+        "ignore_repeat": true,
+        "infer_batch_size": 2,
+        "result_file": "./infer.result"
+    },
+    "save_dir": "dongming_test_output/20210917/MMPMS-041609"
+}
