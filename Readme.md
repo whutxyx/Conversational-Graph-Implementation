@@ -1,4 +1,13 @@
 # Usage
+This project is an implementation for the following paper: 
+Conversational Graph Grounded Policy Learning for Open-Domain Conversation Generation
+Jun Xu, Haifeng Wang, Zheng-Yu Niu, Hua Wu, Wanxiang Che, Ting Liu; ACL2020
+
+Currently we have finished draw the what-vertex. You can directly get the trained what-vertex graph result at `test_output/20210917/result_18`. This result is trained on Persona data. 
+
+To generate the conversational graph, we need to 1. collect the data(Weibo and Persona), 2. extract the keywords(Target-Guided Open-Domain Conversation), 3. draw edges between the keywords(Generating Multiple Diverse Responses with Multi-Mapping and Posterior Mapping Selection). 
+Persona Data: https://drive.google.com/file/d/1YGVGfEpW-UiVd8A24If3LYR1j9aHD13N/view?usp=sharing
+Weibo Data: https://drive.google.com/file/d/1tW_AX8AhEmX-2UvO5kQG5CfU3TutLj0L/view?usp=sharing
 
 ## Data Preparation
 
