@@ -25,14 +25,14 @@ Requirement for Target-Guided Open-Domain Conversation
 - `texar>=0.2.1 (Texar)`
 
 
-First put the dialog corpus file into `preprocess/convai2/source`. The code has an extracted dialog corpus `all_none_original_no_cands.txt` from Persona in this folder.
-(to change the dialog file , please refer to `preprocess/convai2/api.py`)
+First put the dialog corpus file into `Target-Guided-Conversation-master/preprocess/convai2/source`. The code has an extracted dialog corpus `all_none_original_no_cands.txt` from Persona in this folder.
+(to change the dialog file , please refer to `Target-Guided-Conversation-master/preprocess/convai2/api.py`)
 ```shell
-cd preprocess
+cd Target-Guided-Conversation-master/preprocess
 python preprocess.py
 ```
-The generated keywords which should be the original what-vertexes, are divied into three parts at `tx_data/train,valid,test/keywords.txt` . Copy the data to `IJCAI2019-MMPMS/data` .
-(to change the keywords file location , please refer to `preprocess/prepare_data.py`)
+The generated keywords which should be the original what-vertexes, are divied into three parts at `Target-Guided-Conversation-master/tx_data/{train,valid,test}/keywords.txt` . Copy the data to `data/` .
+(to change the keywords file location , please refer to `Target-Guided-Conversation-master/preprocess/prepare_data.py`)
 
 ## Data preprocess
 
@@ -60,7 +60,7 @@ Preprocess the data by running:
 ```shell
 python preprocess.py
 ```
-Use the keywords file `data/train,valid,test.keywords.txt` to generate `.pkl` files for trainning.
+Use the keywords file `data/{train,valid,test}.keywords.txt` to generate `.pkl` files for trainning.
 
 ## Train
 
@@ -68,7 +68,7 @@ To train the model , run:
 ```shell
 python run.py --data_dir data --batch_size 2 --infer_batch_size 2 --save_dir $Save_DIR
 ```
-Use the keywords file `data/train,valid,test.keywords.pkl` to train the model . An example model is located at `test_output/20210917/MMPMS-041609`
+Use the keywords file `data/{train,valid,test}.keywords.pkl` to train the model . An example model is located at `test_output/20210917/MMPMS-041609`
  
 ## Test
 
